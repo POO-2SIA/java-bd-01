@@ -21,7 +21,7 @@ public class CategoriaDAO {
             ps = connection.prepareStatement(sql);
             ps.setLong(1, categoria.getId()); // Esse set define o que será concatenado nas interrogações da ação do prepareStatement
             ps.setString(2, categoria.getCategoria());
-            ps.execute();
+            ps.execute(); //NÃO ESQUECER DESSA LINHA
         } catch (SQLException e) {
             System.out.println("Erro ao iserir uma categoria: " + e);
         }
